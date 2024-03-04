@@ -11,3 +11,16 @@ A website written in HTML using CSS to style the page and Javascript for clickab
 ![image](https://github.com/victoriazinkovich/HTML-website/assets/78615928/4c93a824-e927-4d80-b7e3-21843c5962d5)
 
 ![image](https://github.com/victoriazinkovich/HTML-website/assets/78615928/c4a2f1d2-7c74-4ecf-a1c3-ce8bc8160e77)
+
+
+## "Try it" page
+
+Page to make calculations of melting tempretures using Python. 
+
+1. Upload potential, select lattice of structure and approximate temperature:
+
+![image](https://github.com/victoriazinkovich/HTML-website/assets/78615928/a93e938b-bb81-4855-a207-115b7853abed)
+
+
+2. Push "Start" button and watch the calculations
+
