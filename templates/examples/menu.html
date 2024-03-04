@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var selectGridButton = document.getElementById("selectGridButton");
+      var gridDropdown = document.getElementById("gridDropdown");
+      var uploadPotentialButton = document.getElementById("uploadPotentialButton");
+      var potentialFile = document.getElementById("potentialFile");
+      var startButton = document.getElementById("startButton");
+      var superTitle = document.getElementById("superTitle");
+
+      selectGridButton.addEventListener("click", function() {
+        gridDropdown.classList.remove("hidden");
+      });
+
+      uploadPotentialButton.addEventListener("click", function() {
+        potentialFile.classList.remove("hidden");
+      });
+
+      potentialFile.addEventListener("change", function() {
+        startButton.classList.remove("hidden");
+      });
+
+      startButton.addEventListener("click", function() {
+        superTitle.classList.remove("hidden");
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>Grid Selection and Potential Upload</h1>
+  <button id="selectGridButton">Select Grid</button>
+  <div id="gridDropdown" class="hidden">
+    <select id="gridType">
+      <option value="bcc">BCC</option>
+      <option value="fcc">FCC</option>
+      <option value="diamond">Diamond</option>
+    </select>
+  </div>
+  <button id="uploadPotentialButton">Upload Potential</button>
+  <input type="file" id="potentialFile" class="hidden">
+  <button id="startButton" class="hidden">Start</button>
+  <h2 id="superTitle" class="hidden">Super!</h2>
+</body>
+</html>
+

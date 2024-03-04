@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+  <!-- font-family: "Inconsolata", sans-serif;  -->
+  <!-- Ref to Google Fonts to use them legally! -->
+  <head>
+      
+    <title>MeltingPoint</title>
+      
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!--To create a responsive website-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Concert+One&family=Days+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">  
+    
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var startButton = document.getElementById("startButton");
+      var superTitle = document.getElementById("superTitle");
+      const endBlock = document.getElementById("endBlock");
+      var Step2 = document.getElementById("Step2");
+      var Text2 = document.getElementById("Text2");
+
+      potentialFile.addEventListener("change", function() {
+        startButton.classList.remove("hidden");
+      });
+
+      startButton.addEventListener("click", function() {
+        superTitle.classList.remove("hidden");
+        endBlock.classList.remove("hidden");
+          
+        setTimeout(function() {
+           const startBlock = document.getElementById("startBlock");
+           const arrow = document.getElementById("arrow"); 
+
+           const startRect = startBlock.getBoundingClientRect();
+           const endRect = endBlock.getBoundingClientRect();
+
+           const arrowHeight = endRect.top - startRect.bottom;
+
+           arrow.style.height = arrowHeight + "px";
+           arrow.style.opacity = 1;
+           arrow.style.left = startRect.left + startRect.width / 2 + "px";
+           arrow.style.top = startRect.bottom + "px";
+       }, 200); // Delay the appearance of the arrow
+          
+       
+       setTimeout(function() {
+          Step2.classList.remove("hidden");
+          Text2.classList.remove("hidden");
+          // Scroll to the "step 2" title
+          window.scrollTo({
+           top: document.getElementById('Step2').offsetTop,
+           behavior: 'smooth'
+          });
+        }, 1000); 
+      });
+        
+    });
+  </script>
+  </head>
+<body>
+   
+    
+<!-- Links (sit on top) -->
+<div class="w3-top" style="background:#4E4FEB;font-family: 'Days One', sans-serif;color:white;">
+  <div class="w3-row w3-padding" style="background:#4E4FEB">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block">Main</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#try" class="w3-button w3-block">Try it</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#how it works" class="w3-button w3-block">How it works</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#contacts" class="w3-button w3-block">Contacts</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#help" class="w3-button w3-block">Help</a>
+    </div>
+  </div>
+</div>
+
+    
+    
+<img src="/static/images/side.png" class="display-left-side" style="position:absolute;
+                                                                    top:0%;
+                                                                    left:0.5%;
+                                                                    max-width:6%">
+
+<img src="/static/images/side.png" class="display-left-side" style="position:absolute;
+                                                                top:0%;
+                                                                left:94%;
+                                                                max-width:6%">
+    
+<img src="/static/images/side.png" class="display-left-side" style="position:absolute;
+                                                                    top:60%;
+                                                                    left:0.5%;
+                                                                    max-width:6%">
+    
+<img src="/static/images/side.png" class="display-left-side" style="position:absolute;
+                                                                top:60%;
+                                                                left:94%;
+                                                                max-width:6%">
+    
+<img src="/static/images/side.png" class="display-left-side" style="position:absolute;
+                                                                    top:120%;
+                                                                    left:0.5%;
+                                                                    max-width:6%">
+
+<img src="/static/images/side.png" class="display-left-side" style="position:absolute;
+                                                                top:120%;
+                                                                left:94%;
+                                                                max-width:6%">
+    
+<img src="/static/images/side.png" class="display-left-side" style="position:absolute;
+                                                                    top:180%;
+                                                                    left:0.5%;
+                                                                    max-width:6%">
+    
+<img src="/static/images/side.png" class="display-left-side" style="position:absolute;
+                                                                top:180%;
+                                                                left:94%;
+                                                                max-width:6%">
+    
+<img src="/static/images/side.png" class="display-left-side" style="position:absolute;
+                                                                    top:240%;
+                                                                    left:0.5%;
+                                                                    max-width:6%">
+    
+<img src="/static/images/side.png" class="display-left-side" style="position:absolute;
+                                                                top:240%;
+                                                                left:94%;
+                                                                max-width:6%">
+<img src="/static/images/side.png" class="display-left-side" style="position:absolute;
+                                                                    top:300%;
+                                                                    left:0.5%;
+                                                                    max-width:6%">
+    
+<img src="/static/images/side.png" class="display-left-side" style="position:absolute;
+                                                                top:300%;
+                                                                left:94%;
+                                                                max-width:6%">
+    
+    
+<div style="max-width:1200px">
+    <h1 class="w3-center w3-padding-64" style="color: #4E4FEB;
+                                               font-family: 'Days One', sans-serif;
+                                               position: absolute;
+                                               top: 6%;
+                                               left: 12%"> 
+        Melting Point Calculations </h1>
+    
+    <p style="text-align-last: left;
+              font-size: 20px;
+              position: absolute;
+              top: 22%;
+              left: 12%;">
+        <b>Status:</b> &nbsp; Upload data to start calculations </p>
+    
+    <p style="text-align-last: left;
+              font-size: 20px;
+              position: absolute;
+              top: 22%;
+              left: 42%;">
+        <b>Melting Point:</b> &nbsp; Upload data to find the melting point </p>
+
+</div>
+    
+ 
+   
+    
+
+<!-- Graph with blocks -->
+<p id="startBlock"
+   style="border-style: solid;
+          margin-top: 30px;
+          margin-left: 310px;
+          position: absolute;
+          padding: 15px;
+          border-color: #4E4FEB;
+          border-radius: 10px;">
+    Input Data </p>
+   
+<div class="container">
+    <div id="arrow" class="arrow-container">
+      <div class="arrow"></div>
+    </div>
+</div>
+    
+<p id="endBlock"
+
+   style="border-style: solid;
+          position: absolute;
+          margin-top: 670px;
+          margin-left: 310px;
+          padding: 15px;
+          border-color: #4E4FEB;
+          border-radius: 10px;
+          max-width:160px;
+          text-align: center;"
+   id="end">
+    Construction of potential energy lines </p>
+  
+    
+
+
+    
+    
+    
+<p style="border-style: solid;
+          top:180%;
+          position: absolute;
+          left: 19.5%;
+          padding: 15px;
+          border-color: #4E4FEB;
+          border-radius: 10px;
+          max-width:120px;
+          text-align: center;"
+   id="end">
+    Molecular Dynamics </p>
+    
+    
+<svg width="200" height="2000"
+     style="top:140%;
+            left:20%;
+            position: absolute;">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0,0 10,5 0,10" fill="black" />
+    </marker>
+  </defs>
+  <line x1="50" y1="420" x2="50" y2="505" stroke="black" marker-end="url(#arrowhead)" />
+</svg>
+    
+    
+<p style="border-style: solid;
+          top:200%;
+          position: absolute;
+          left: 18%;
+          padding: 15px;
+          border-color: #4E4FEB;
+          border-radius: 10px;
+          max-width:180px;
+          text-align: center;"
+   id="end">
+    Nonlinear Bayesian Regression </p>
+    
+    
+<svg width="200" height="2000"
+     style="top:160.2%;
+            left:20%;
+            position: absolute;">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0,0 10,5 0,10" fill="black" />
+    </marker>
+  </defs>
+  <line x1="50" y1="420" x2="50" y2="505" stroke="black" marker-end="url(#arrowhead)" />
+</svg>
+    
+    
+<p style="border-style: solid;
+          top:220%;
+          position: absolute;
+          left: 19.5%;
+          padding: 15px;
+          border-color: #4E4FEB;
+          border-radius: 10px;
+          max-width:120px;
+          text-align: center;"
+   id="end">
+    Gaussian Process </p>
+    
+    
+<svg width="200" height="2000"
+     style="top:180%;
+            left:20%;
+            position: absolute;">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0,0 10,5 0,10" fill="black" />
+    </marker>
+  </defs>
+  <line x1="50" y1="420" x2="50" y2="700" stroke="black" marker-end="url(#arrowhead)" />
+</svg>
+    
+    
+<p style="border-style: solid;
+          top:263.5%;
+          position: absolute;
+          left: 19.5%;
+          padding: 15px;
+          border-color: black;
+          border-radius: 10px;
+          max-width:120px;
+          text-align: center;"
+   id="end">
+    Adequate accuracy? </p>
+    
+    
+<svg width="200" height="2000"
+     style="top:224%;
+            left:20%;
+            position: absolute;">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0,0 10,5 0,10" fill="black" />
+    </marker>
+  </defs>
+  <line x1="50" y1="420" x2="50" y2="500" stroke="black" marker-end="url(#arrowhead)" />
+</svg>
+    
+    
+<svg width="200" height="2000"
+     style="top:224%;
+            left:20%;
+            position: absolute;">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0,0 10,5 0,10" fill="black" />
+    </marker>
+  </defs>
+  <line x1="111" y1="380" x2="181" y2="380" stroke="black" />
+</svg>
+    
+    
+<svg width="200" height="2000"
+     style="top:140%;
+            left:20%;
+            position: absolute;">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0,0 10,5 0,10" fill="black" />
+    </marker>
+  </defs>
+  <line  x1="181" y1="380" x2="111" y2="380" stroke="black"  marker-end="url(#arrowhead)" />
+</svg>
+    
+    
+<svg width="200" height="2000"
+     style="top:186.3%;
+            left:20%;
+            position: absolute;">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0,0 10,5 0,10" fill="black" />
+    </marker>
+  </defs>
+  <line x1="181" y1="690" x2="181" y2="0" stroke="black" />
+</svg>
+    
+    
+<p style="border-style: solid;
+          top:283%;
+          position: absolute;
+          left: 20.5%;
+          padding: 15px;
+          border-color: #4E4FEB;
+          border-radius: 10px;
+          max-width:120px;
+          text-align: center;"
+   id="end">
+    FINISH </p>
+ 
+<p style="
+          top:275%;
+          position: absolute;
+          left: 23%;
+          padding: 15px;
+          text-align: center;"
+   id="end">
+    Yes </p>
+    
+<p style="
+          top:263%;
+          position: absolute;
+          left: 28%;
+          padding: 15px;
+          text-align: center;"
+   id="end">
+    No </p>
+    
+    
+    
+
+    
+    
+<!-- Sections -->
+<div class="section-container">
+    
+    <!-- Section 1 -->
+    <div class="section">
+      <h3 class="heading">Step 1. Input Data</h3>
+      <p>To start calculations upload initial data</p>
+      <br>
+        
+      <div class="subsection">
+          <div class="subsection-item">
+              <img src="/static/images/fcc.png" style="max-width:10%">
+                  <p> Lattice type </p>
+                  <div class="dropdown-container">
+                      <div id="gridDropdown">
+                          <select id="gridType">
+                              <option value="bcc">BCC</option>
+                              <option value="fcc">FCC</option>
+                              <option value="diamond">Diamond</option>
+                          </select>
+                      </div>
+                  </div>
+           </div>
+           
+          <!--
+          <div class="subsection-item">
+              <img src="/static/images/aluminium.jpg" style="max-width:30%">
+              <div style="margin-left: 30px">
+                  <p> Interatomic potential </p>
+                  <input type="file" id="potentialFile">
+              </div>
+          </div>
+        -->
+      </div>
+        
+      <div>
+        <div id="startButton" class="hidden" class="w3-center display-button">
+            <br>
+            <button class="button">Start</button>
+        </div>
+        <br>
+        <h6 id="superTitle" class="hidden" style="font-size: 18px">Files has been uploaded successfully. Status updated. <br> The calculations has started!</h6>
+    </div>
+    </div>
+    
+    
+    <!-- Section 2 -->
+    <div class="section">
+        
+      <h3 class="hidden heading" id="Step2">Step 2. Thresholds energies</h3>
+      <p class="hidden" id="Text2" style="max-width:700px;"> 
+        To determine whether our two-phase system is melted or solidified, we compare the potential energy during the simulation with the defined <b>solid</b> and <b>liquid threshold energies</b> </p>
+    </div>
+</div>
+
+    
+    
+    
+    
+    
+
+    
+    
+<div class="left-text" style="top:180%;
+                              text-align-last: left;
+                              font-size: 18px;
+                              position: absolute; 
+                              left: 42%;
+                              ">
+    
+    <p style="color: #4E4FEB;
+              font-family: 'Days One', sans-serif;"> 
+        Step 3. Melting Point Convergence graph </p>
+    
+    <p style="max-width:800px;
+              "> 
+        Using <b>molecular dynamics</b>, <b>nonlinear Bayesian regression</b> and <b>Gaussian process</b>, the melting temperature is found with a given accuracy </p>
+    
+    <p> Stage: 4/4 </p>
+
+    <img src="/static/images/GP.png" style="max-width:70%;
+                                         top:48%;">
+</div>
+    
+
+    
+</body>
+</html>

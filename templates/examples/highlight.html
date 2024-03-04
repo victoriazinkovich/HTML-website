@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      position: relative;
+      text-align: center;
+    }
+
+    p {
+      border: 2px solid #4E4FEB;
+      border-radius: 10px;
+      padding: 15px;
+      max-width: 160px;
+    }
+
+    #arrow {
+      position: absolute;
+      width: 2px;
+      background-color: black;
+      transition: height 0.5s, opacity 0.5s;
+      transform-origin: top center;
+    }
+
+    button {
+      margin: 10px;
+    }
+      
+    .arrow-container {
+        position: absolute;
+        left: 50%;
+        top: 110px;
+        transform: translateX(-50%);
+        width: 2px;
+        height: calc(100% - 220px);
+        background-color: black;
+  }
+
+  .arrow {
+        width: 1px;
+        height: calc(100% - 20px);
+        background-color: black;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+  }
+  </style>
+  <title>Arrow Animation</title>
+</head>
+<body>
+  <div class="container">
+    <button id="startButton">Start</button>
+    <p id="startBlock">Input Data</p>
+    <div id="arrow" class="arrow-container">
+      <div class="arrow"></div>
+    </div>
+    <p id="endBlock">Construction of potential energy lines</p>
+  </div>
+  <script>
+    document.getElementById("startButton").addEventListener("click", () => {
+      const startBlock = document.getElementById("startBlock");
+      const endBlock = document.getElementById("endBlock");
+      const arrow = document.getElementById("arrow");
+
+      const startRect = startBlock.getBoundingClientRect();
+      const endRect = endBlock.getBoundingClientRect();
+
+      const arrowHeight = endRect.top - startRect.bottom;
+
+      arrow.style.height = arrowHeight + "px";
+      arrow.style.opacity = 1;
+    });
+  </script>
+</body>
+</html>
+
