@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+  <!-- font-family: "Inconsolata", sans-serif;  -->
+  <!-- Ref to Google Fonts to use them legally! -->
+  <head>
+    <title>MeltingPoint</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!--To create a responsive website-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Concert+One&family=Days+One&display=swap" rel="stylesheet">
+
+<style>
+/* ---- GENERAL ---- */
+header{
+    min-height: 100% !important;
+    background-image:url("/static/images/background-2.png");
+}
+body, html{
+    height: 100%;
+    font-family: 'Nunito', sans-serif;
+}
+.line{
+    border: none;
+    height: 50px;
+    background-color: #BFACE2;
+    margin: 0;
+}
+.display-left-side{
+    position:absolute;
+    left:0.5%;
+    max-width:6%;
+}
+.display-right-side{
+    position:absolute;
+    left:94%;
+    max-width:6%;
+}
+.spacer{
+    margin-bottom: 20px;
+}
+        
+/* ---- HEADER ---- */
+.bgimg{
+    background-position: center;
+    background-size:     cover;
+    text-align:          left;
+    padding:             130px 200px;
+}
+.head{
+    font-size: 18px;
+}
+.head-color{
+    font-family: 'Days One', sans-serif;
+    color: #4E4FEB;
+}
+.head-cursor{
+    margin-left: 130px;
+    max-width:   3.5%;
+}
+.head-lab{
+    margin-left: 550px;
+    font-size:   20px;
+}
+        
+/* ---- BODY ---- */
+.body-head{
+    
+    font-size:   20px;
+}       
+        
+        
+        
+/* ---- BUTTON ---- */
+.display-button{
+    font-size: 20px;
+    text-align-last: left;
+}
+.button{
+    align-items: center;
+    appearance: none;
+    font-weight: bold;
+    background-color: #4E4FEB;
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-size: 20px;
+    font-weight: 700;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: .80px;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 2px 24px;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform,opacity;
+    z-index: 0;
+}
+        
+/* ---- OTHER ---- */
+
+    .menu{
+      display: none;
+    }
+    .w3-col.s3{
+        width:20.0%;
+        font-size: 110%;
+    }
+    .ice-image{
+        position:absolute;
+        top:10%;
+        left:8%;
+        max-width: 20%;
+        height: auto;
+    }
+    .w3-color{
+        background-color:#EEF1FF;
+    }
+    .rectangle{
+        position:absolute;
+        width:710px;
+        height:350px;
+        background:white;
+        top:25%;
+        left:10%;
+    }
+    .rectangle-small{
+        position:absolute;
+        width:650px;
+        height:70px;
+        background:white;
+        top:81%;
+        left:49%;
+    }
+    .main-upload{
+        position:absolute;
+        top:78%;
+        left:50%;
+        font-size: 24px;
+    }
+</style>
+</head>
+
+<body>
+
+    
+<!-- SIDE IMAGES -->
+<!-- <div class="line"> </div> -->
+<div>
+    <img src="/static/images/side.png" class="display-left-side" style="top:110%;">
+    <img src="/static/images/side.png" class="display-left-side" style="top:162%;">
+    <img src="/static/images/side.png" class="display-left-side" style="top:214%;">
+    <img src="/static/images/side.png" class="display-left-side" style="top:266%;">
+    
+    <img src="/static/images/side.png" class="display-right-side" style="top:110%;">
+    <img src="/static/images/side.png" class="display-right-side" style="top:162%;">
+    <img src="/static/images/side.png" class="display-right-side" style="top:214%;">
+    <img src="/static/images/side.png" class="display-right-side" style="top:266%;">
+</div>
+    
+    
+<!-- LINKS (fix on top -> class="w3-top") -->
+<div style="background:#4E4FEB;font-family: 'Days One', sans-serif;color:white;">
+  <div class="w3-row w3-padding" style="background:#4E4FEB">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block">Main</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#try" class="w3-button w3-block">Try it</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#how it works" class="w3-button w3-block">How it works</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#contacts" class="w3-button w3-block">Contacts</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#help" class="w3-button w3-block">Help</a>
+    </div>
+  </div>
+</div>
+
+    
+<!-- HEADER -->
+<header class="bgimg" id="home"> 
+    <div >
+        <span class="head-color" style="font-size: 50px;"><br><b>Melting Point Calculator</b></span>
+        <div class="spacer"></div>
+        <h6 style="font-size: 28px">A physics-informed AI method for calculating <br> melting points with <b color="blue">uncertainty control</b> <br> and <b>optimal sampling</b></h6>
+        <div class="spacer"></div>
+        <div class="display-button">
+            <button class="button" id="clickButton">Click!</button>
+        </div>
+        <img class="head-cursor" id="cursor" src="/static/images/cursor.jpg">
+        <div class="head-lab">
+            <span class="w3-content"><br><b>Laboratory of Artificial Intelligence for Materials Design</b><sup><a href="http://sites.skoltech.ru/multiscale" target="_blank">link</a></sup></span>
+        </div>
+    </div>
+</header>
+    
+    
+<!-- MAIN BODY -->
+<div>
+    <div id="how it works" style="margin-left: 200px; align-items: center; text-align: left">
+        <div id="body-header" class="head-color" style="font-size: 50px;"><br><b> H o w &nbsp; i t &nbsp; w o r k s? </b></div>
+        
+        
+        <div style="display: flex; margin-top: 20px; position: relative; left: 50px;">
+            <div class="spacer"> </div>
+            <div style="position: absolute; top: 80px;">
+                <img style="max-width:10%;" src="/static/images/aluminium.jpg">
+                <img style="max-width:10%; margin-left: 20px" src="/static/images/fcc.png">
+                <img style="max-width:10%; margin-left: 20px" src="/static/images/potential.png">
+            </div>
+            
+            <div style="position: absolute; top: 50px; left: 610px;">
+                <h1 class="head-color" id="uploadData" style="" > 1. Upload data </h1>
+                <p style="font-size: 24px; max-width: 400px;">
+                    Given the interatomic interaction model, the method makes decisions regarding the number of atoms and temperature at which to conduct simulations </p>
+            </div>
+        </div>
+        
+        
+        <div style="display: flex; margin-top: 20px; position: relative; left: 50px;">
+            <div class="spacer"> </div>
+            <div style="position: absolute; top: 530px;">
+                <h1 class="head-color" id="uploadData" style="" > 2. Track the progress </h1>
+                <p style="font-size: 24px; max-width: 400px;">
+                    Data for different number of atoms N are combined to find the limit of the melting point as N → ∞ </p>
+            </div>
+            
+            <div style="position: absolute; top: 410px; left: 500px;">
+                <img style="max-width:70%;" src="/static/images/track.gif">
+            </div>
+        </div>
+        
+        
+        <div style="position: absolute; top: 2060px; left: 170px;">
+            <img style="max-width:50%;" src="/static/images/arrow-1.jpg">
+        </div>
+        <div style="display: flex; margin-top: 20px; position: relative; left: 50px;">
+            <div style="position: absolute; top: 940px; left: 120px;">
+                <p style="font-size: 28px; line-height: 2.5;">
+                T<sub>1</sub> = 934 ± 148 K <br>
+                T<sub>2</sub> = 926 ± 12 K <br>
+                ... <br>
+                T<sub>6</sub> = 924 ± 1 K </p>
+            </div>
+            <div style="position: absolute; top: 950px; left: 610px;">
+                <h1 class="head-color" id="uploadData" style="" > 3. Get the result </h1>
+                <p style="font-size: 24px; max-width: 400px;">
+                    Based on the collected data predicts the melting point along with the uncertainty, which can be systematically improved with more data</p>
+                <a href="{{ url_for('try_page') }}"><button class="button" role="button">Try it!</button></a>
+            </div>
+        </div>
+        
+        <div style="position: absolute; top: 1330px; left: 570px;">
+            <img style="max-width:50%;" src="/static/images/punctir-left.png">
+        </div>
+        <div style="position: absolute; top: 1850px; left: 570px;">
+            <img style="max-width:50%;" src="/static/images/punctir-right.png">
+        </div>
+    </div>
+</div>
+    
+    
+    
+<script>
+// JavaScript code to handle the button click event
+document.getElementById('clickButton').addEventListener('click', function() {
+    
+  const sectionTitle = document.getElementById('body-header');
+
+  sectionTitle.scrollIntoView({ behavior: 'smooth' });
+    
+});
+</script>
+    
+    
+
+</body>
+</html>

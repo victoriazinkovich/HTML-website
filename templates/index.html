@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+  <!-- font-family: "Inconsolata", sans-serif;  -->
+  <!-- Ref to Google Fonts to use them legally! -->
+  <head>
+      
+    <title>MeltingPoint</title>
+      
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!--To create a responsive website-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Concert+One&family=Days+One&display=swap" rel="stylesheet">
+    
+  <style>
+/* ---- GENERAL ---- */
+header{
+    min-height: 100% !important;
+    background-image:url("/static/images/background-2.png");
+}
+body, html{
+    height: 100%;
+    font-family: 'Nunito', sans-serif;
+}
+svg {
+    position: absolute;
+}
+
+line {
+    stroke: black;
+    stroke-width: 1;
+}
+.spacer{
+    margin-bottom: 30px;
+}
+.display-left-side{
+    position:absolute;
+    left:0.5%;
+    max-width:6%;
+}
+.display-right-side{
+    position:absolute;
+    left:94%;
+    max-width:6%;
+}
+.menu{
+  display: none;
+}
+.hidden {
+  display: none;
+}
+        
+      
+/* ---- HEADER ---- */
+.head{
+    margin-left: 180px;
+    margin-top:  120px;
+    font-size:   22px;
+}
+.head-color{
+    font-family: 'Days One', sans-serif;
+    color: #4E4FEB;
+}
+.head-line {
+    text-align: left;
+    display: flex; 
+}
+.head-label {
+    font-weight: bold;
+    width: 180px; 
+}
+.bgimg{
+    background-position: center;
+    background-size: cover;
+    min-height: 75%;
+}
+      
+        
+/* ---- SECTIONS ---- */
+.section-container{
+    font-size: 22px;
+}
+.section-text{
+    max-width: 700px;
+}
+.section-mini{
+    display:      flex;
+    align-items:  center;
+    margin-right: 70px;
+}
+.section-mini img {
+    margin-right: 20px; 
+}
+.section{
+    margin-bottom: 150px;
+}
+        
+        
+/* ---- FLOW CHART ---- */
+.chart-box{
+    border:        2px solid #4E4FEB;
+    padding:       15px;
+    border-radius: 10px;
+    text-align:    center;
+    font-size:     20px;
+}
+.chart-rhombus{
+    width:     150px;
+    height:    150px;
+    border:    1.5px solid black;
+    position:  absolute;
+    transform: rotate(45deg); /* Rotate the square by 45 degrees to make a rhombus */
+}
+.chart-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg); /* Rotate the text back to horizontal */
+    font-size:     20px;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+  
+/* ---- MAIN BODY ---- */
+.heading {
+    color:        #4E4FEB;
+    font-family: 'Days One', sans-serif;
+    font-size:    28px;
+}
+.arrow{
+    position: absolute;
+    width: 1px;
+    background-color: black;
+    transform-origin: top center;
+}  
+.arrow-container{
+    position: absolute;
+    transition: height 1s, opacity 1s;
+    width: 1px;
+    background-color: black;
+}
+      
+      
+/* ---- BUTTON ---- */
+.button{
+    align-items: center;
+    appearance: none;
+    font-weight: bold;
+    background-color: #4E4FEB;
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-size: 22px;
+    font-weight: 700;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: .80px;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 2px 24px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform,opacity;
+    z-index: 0;
+}
+        
+      
+/* ---- OTHER ---- */     
+.w3-col.s3{
+    width:20.0%;
+    font-size: 110%;
+}
+.left-text{
+    text-align-last: left;
+    font-size: 18px;
+    position: absolute;
+    left: 42%;
+}
+.dropdown-container{
+    position: relative;
+    display: inline-block;
+    }
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+.dropdown-container.open .dropdown-content{
+    display: block;
+}
+.container{
+    position: relative;
+    text-align: center;
+}
+  </style>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script>
+        var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+        function buildGraphs() {
+            var StartMessage = document.getElementById("StartMessage");
+            const Block2 = document.getElementById("Block2");
+            var Arrow2 = document.getElementById("Arrow2");
+            
+            StartMessage.classList.remove("hidden");
+            Block2.classList.remove("hidden");
+            Arrow2.classList.remove("hidden");
+            
+            var displayText = document.getElementById("status");
+            displayText.innerHTML = "defining thresholds in progress";
+            
+            var Step2  = document.getElementById("Step2");
+            var Text2  = document.getElementById("Text2");
+            var Image2 = document.getElementById("Image2");
+            
+            setTimeout(function () {
+                Step2.classList.remove("hidden");
+                Text2.classList.remove("hidden");
+                Image2.classList.remove("hidden");
+                window.scrollTo({
+                    top: document.getElementById('Text2').offsetTop,
+                    behavior: 'smooth'
+                });
+            }, 500);
+            
+            var number = document.getElementById("numberInput").value;
+            var selectedOption = document.getElementById("optionsSelect").value;
+            var fileInput = document.getElementById("fileInput");
+            var potential = fileInput.files[0];
+
+            socket.emit('build_graphs', { number: number, option: selectedOption, file : potential });
+        }
+
+        
+        socket.on('show_graph', function(data) {
+            $("#loading-2").addClass("hidden");
+            $("#spinner-2").addClass("hidden");
+            
+            $("#graph_lines").append('<img src="data:image/png;base64,' + data + '">');
+            
+            var displayText = document.getElementById("status");
+            displayText.innerHTML = "calculating melting point";
+            
+            var Step3  = document.getElementById("Step3");
+            var Text3  = document.getElementById("Text3");
+            var Image3 = document.getElementById("Image3");
+            
+            setTimeout(function () {
+                Step3.classList.remove("hidden");
+                Text3.classList.remove("hidden");
+                Image3.classList.remove("hidden");
+                window.scrollTo({
+                    top: document.getElementById('Text3').offsetTop,
+                    behavior: 'smooth'
+                });
+            }, 500);
+            
+            const Block3 = document.getElementById("Block3");
+            const Block4 = document.getElementById("Block4");
+            const Block5 = document.getElementById("Block5");
+            
+            Block3.classList.remove("hidden");
+            Block4.classList.remove("hidden");
+            Block5.classList.remove("hidden");
+            
+            var Arrow3  = document.getElementById("Arrow3");
+            var Arrow4  = document.getElementById("Arrow4");
+            var Arrow5  = document.getElementById("Arrow5");
+
+            Arrow3.classList.remove("hidden");
+            Arrow4.classList.remove("hidden");
+            Arrow5.classList.remove("hidden");
+        });
+        
+        
+        var currentIndex = 0;
+        
+        socket.on('converge_graph', function(data) {
+            $("#loading-3").addClass("hidden");
+            $("#spinner-3").addClass("hidden");
+            
+            const left = document.getElementById("left");
+            const right = document.getElementById("right");
+            
+            left.classList.remove("hidden");
+            right.classList.remove("hidden");
+            
+            const Block6 = document.getElementById("Block6");
+            
+            Block6.classList.remove("hidden");
+            
+            var Arrow6  = document.getElementById("Arrow6");
+            var Arrow8  = document.getElementById("Arrow8");
+            var Arrow9  = document.getElementById("Arrow9");
+            var Arrow10 = document.getElementById("Arrow10");
+            
+            Arrow6.classList.remove("hidden");
+            Arrow8.classList.remove("hidden");
+            Arrow9.classList.remove("hidden");
+            Arrow10.classList.remove("hidden");
+            
+            const TextNo = document.getElementById("TextNo");
+            TextNo.classList.remove("hidden");
+            
+            var container = document.getElementById('graph-container');
+            var img = document.createElement('img');
+            img.src = 'data:image/png;base64,' + data.image;
+            img.className = 'graph';
+            container.appendChild(img);
+            
+            var t_container = document.getElementById('temps-container');
+            var t = document.createElement('t');
+            t.innerHTML = "Current Melting Temperature: " + data.T + " ± " + data.T_sigm;
+            t.className = 'temp';
+            t_container.appendChild(t);
+            currentIndex = 0;
+            
+            var MP = document.getElementById("MP");
+            MP.innerHTML = data.T + " ± " + data.T_sigm;
+            
+            var graphs = document.getElementsByClassName('graph');
+            showGraph(graphs.length - 1);
+        });
+
+        function showGraph(index) {
+            var graphs = document.getElementsByClassName('graph');
+            for (var i = 0; i < graphs.length; i++) {
+                graphs[i].style.display = 'none';
+            }
+            graphs[index].style.display = 'block';
+            
+            var temps = document.getElementsByClassName('temp');
+            for (var i = 0; i < temps.length; i++) {
+                temps[i].style.display = 'none';
+            }
+            temps[index].style.display = 'block';
+        }
+
+        function nextGraph() {
+            var graphs = document.getElementsByClassName('graph');
+            if (currentIndex < graphs.length - 1) {
+                currentIndex++;
+                showGraph(currentIndex);
+            }
+        }
+
+        function prevGraph() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                showGraph(currentIndex);
+            }
+        }
+        
+        socket.on('finish', function() {
+            const Block7 = document.getElementById("Block7");
+            Block7.classList.remove("hidden");
+            
+            var Arrow7  = document.getElementById("Arrow7");
+            Arrow7.classList.remove("hidden");
+            
+            const TextYes = document.getElementById("TextYes");
+            TextYes.classList.remove("hidden");
+            
+            setTimeout(function () {
+                const Finished = document.getElementById("Finished");
+                Finished.classList.remove("hidden");
+                window.scrollTo({
+                    top: document.getElementById('Finished').offsetTop,
+                    behavior: 'smooth'
+                });
+            }, 500);
+        });
+        
+    </script>
+     
+  </head>
+<body>
+   
+    
+<!-- LINKS (sit on top) -->
+<div class="w3-top" style="background:#4E4FEB; font-family: 'Days One', sans-serif; color:white;">
+  <div class="w3-row w3-padding" style="background:#4E4FEB">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block">Main</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#try" class="w3-button w3-block">Try it</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#how it works" class="w3-button w3-block">How it works</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#contacts" class="w3-button w3-block">Contacts</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#help" class="w3-button w3-block">Help</a>
+    </div>
+  </div>
+</div>
+    
+    
+<!-- SIDE IMAGES -->
+<!-- <div class="line"> </div> -->
+<div>
+    <img src="/static/images/side.png" class="display-left-side" style="top:0%;">
+    <img src="/static/images/side.png" class="display-left-side" style="top:60%;">
+    <img src="/static/images/side.png" class="display-left-side" style="top:120%;">
+    <img src="/static/images/side.png" class="display-left-side" style="top:180%;">
+    <img src="/static/images/side.png" class="display-left-side" style="top:240%;">
+    <img src="/static/images/side.png" class="display-left-side" style="top:300%;">
+    
+    <img src="/static/images/side.png" class="display-right-side" style="top:0%;">
+    <img src="/static/images/side.png" class="display-right-side" style="top:60%;">
+    <img src="/static/images/side.png" class="display-right-side" style="top:120%;">
+    <img src="/static/images/side.png" class="display-right-side" style="top:180%;">
+    <img src="/static/images/side.png" class="display-right-side" style="top:240%;">
+    <img src="/static/images/side.png" class="display-right-side" style="top:300%;">
+</div>
+    
+ 
+<!-- TOP INFO -->
+<div class="head">
+    <h1 class="head-color" style="font-size: 36px;"> Melting Point Calculator </h1> 
+    <div class="spacer"></div>
+    <div class="head-line" style="margin-left: 10px;">
+      <span class="head-label">Status:</span>
+      <div id="status">upload data to start calculations</div>
+    </div>
+    <div class="head-line" style="margin-left: 10px;">
+      <span class="head-label">Melting point:</span>
+      <div id="MP">—</div>
+    </div>
+</div>
+    
+    
+    
+<!-- FLOW CHART -->
+<div class="container">
+    <div id="arrow" class="arrow-container">
+      <div class="arrow"></div>
+    </div>
+</div>
+ 
+    
+    
+<!-- SECTIONS -->
+<div style="display: flex; position: relative;">
+    <div style="position: absolute; left: 270px; top: 50px;">
+        <p id="Block1" class="chart-box"> Input Data </p>
+    </div>
+    
+    <svg width="1000" height="800" id="Arrow2" class="hidden"> 
+        <line x1="335" y1="132" x2="335" y2="700" /> 
+    </svg>
+    
+    <div style="position: absolute; left: 230px; top: 680px; width: 200px;">
+        <p id="Block2" class="chart-box hidden"> Construction of potential energy lines </p>
+    </div>
+        
+    <svg width="1000" height="1800" id="Arrow3" class="hidden"> 
+        <line x1="335" y1="823" x2="335" y2="1420" /> 
+    </svg>
+    
+    <div style="position: absolute; left: 260px; top: 1400px; width: 150px;">
+        <p id="Block3" class="chart-box hidden"> Molecular Dynamics </p>
+    </div>
+    
+    <svg width="1000" height="1800" id="Arrow4" class="hidden"> 
+        <line x1="335" y1="1513" x2="335" y2="1600" /> 
+    </svg>
+    
+    <div style="position: absolute; left: 240px; top: 1580px; width: 200px;">
+        <p id="Block4" class="chart-box hidden"> Nonlinear Baysian Regression </p>
+    </div>
+        
+    <svg width="1000" height="1800" id="Arrow5" class="hidden"> 
+        <line x1="335" y1="1693" x2="335" y2="1780" /> 
+    </svg>
+    
+    <div style="position: absolute; left: 260px; top: 1760px; width: 150px;">
+        <p id="Block5" class="chart-box hidden"> Gaussian Process </p>
+    </div>
+    
+    <svg width="1000" height="2800" id="Arrow6" class="hidden"> 
+        <line x1="335" y1="1873" x2="335" y2="2000" /> 
+    </svg>
+    
+    <div id="Block6" class="chart-rhombus hidden" style="left: 260px; top: 2030px; width: 150px;">
+        <p class="chart-text">Adequate accuracy?</p>
+    </div>
+    
+    <svg width="1000" height="2800" id="Arrow7" class="hidden"> 
+        <line x1="335" y1="2210" x2="335" y2="2300" /> 
+    </svg>
+    
+    <div style="position: absolute; left: 260px; top: 2280px; width: 150px;">
+        <p id="Block7" class="chart-box hidden"> Finish </p>
+    </div>
+    
+    <svg width="1000" height="2800" id="Arrow8" class="hidden"> 
+        <line x1="440" y1="2105" x2="500" y2="2105" /> 
+    </svg>
+    
+    <svg width="1000" height="2800" id="Arrow9" class="hidden"> 
+        <line x1="410" y1="1465" x2="500" y2="1465" /> 
+    </svg>
+    
+    <svg width="1000" height="2800" id="Arrow10" class="hidden"> 
+        <line x1="500" y1="1465" x2="500" y2="2106" /> 
+    </svg>
+    
+    <div style="position: absolute; left: 350px; top: 2210px; font-size: 20px">
+        <p id="TextYes" class="hidden"> <b>Yes</b> </p>
+    </div>
+    
+    <div style="position: absolute; left: 455px; top: 2035px; font-size: 20px">
+        <p id="TextNo" class="hidden"> <b>No</b> </p>
+    </div>
+    
+    <div class="section-container" style="position: absolute; top: 50px; left: 630px;">
+        <!-- Section 1 -->
+        <div class="section">
+          <h3 class="heading">Step 1. Input Data</h3>
+          <p class="section-text">To start calculations upload initial data: select type of lattice and upload file with interatomic potential</p>
+          <form id="upload-form" enctype="multipart/form-data">
+              <div class="section-mini">
+                  <div class="section-mini">
+                      <img src="/static/images/fcc.png" style="width: 110px">
+                      <div>
+                          <p> Lattice </p>
+                          <div class="dropdown-container">
+                              <div>
+                                  <select id="optionsSelect">
+                                      <option value="bcc">BCC</option>
+                                      <option value="fcc">FCC</option>
+                                      <option value="diamond">Diamond</option>
+                                  </select>
+                              </div>
+                          </div>
+                      </div>
+                   </div>
+                   <div class="section-mini">
+                       <img src="/static/images/potential.png" style="width: 120px">
+                       <div>
+                           <p> Interatomic potential </p>
+                           <input type="file" id="fileInput">
+                       </div>
+                   </div>
+                </div>
+                <div class="spacer"></div>
+                <label for="numberInput">Enter approximate melting temperature: &nbsp;</label>
+                <input type="number" id="numberInput" style="width: 100px;">
+                <span>&nbsp; K</span>
+            </form>
+            <div>
+                <div id="startButton" class="display-button">
+                    <div style="margin-bottom: 40px;"></div>
+                    <div style="display: flex; gap: 20px;">
+                        <button onclick="buildGraphs()" class="button">Start</button>
+                        <p id="status-message"></p>
+                    </div>
+                </div>
+                <div class="spacer"></div>
+                <p id="status-message"></p>
+                <h6 id="StartMessage" class="hidden" style="font-size: 20px"> Status updated. <br> <b>The calculations has started!</b></h6> 
+            </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="section">
+          <h3 class="hidden heading" id="Step2">Step 2. Thresholds energies</h3>
+          <p class="hidden" id="Text2" style="max-width:700px;"> To determine whether our two-phase system is melted or solidified, we compare the potential energy during the simulation with the defined <b>solid</b> and <b>liquid threshold energies</b> </p>
+          <div class="hidden" id="Image2">
+              <div  id="graph_lines"></div>
+              <img  id="spinner-2" src="/static/images/spinner-5.gif" style="max-width:10%;">
+              <span id="loading-2"> &nbsp; Loading</span>
+          </div>
+        </div>
+        
+        
+        <!-- Section 3 -->
+        <div class="section">
+          <h3 class="hidden heading" id="Step3">Step 3. Melting point convergence graph</h3>
+          <p class="hidden" id="Text3" style="max-width:700px;"> To calculate the melting point we conduct <b>molecular dynamics</b> simulation in an isotermic-isobaric (NPT) ensemble</p>
+          <div class="hidden" id="Image3">
+              <div  id="graph_converge"></div>
+              <img  id="spinner-3" src="/static/images/spinner-5.gif" style="max-width:10%;" >
+              <span id="loading-3"> &nbsp; Loading</span>
+              
+              <button class="hidden" id="left"  onclick="prevGraph()">←</button>
+              <button class="hidden" id="right" onclick="nextGraph()">→</button>
+              
+              <div class="spacer"></div>
+              <div id="temps-container"></div>
+              <div id="graph-container" class="graph-container"></div>
+          </div>
+        </div>
+    </div>
+    
+    <p id="Finished" class="hidden" style="position:  absolute; 
+                                           left:      630px; 
+                                           top:       2300px; 
+                                           font-size: 20px">  Your calculations are <b>completed</b></p>
+</div>    
+    
+    
+    
+</body>
+</html>
+
+
+
